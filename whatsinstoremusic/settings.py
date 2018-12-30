@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-import environ, os
+import os
+
+import environ
 
 root = environ.Path(__file__) - 2  # -2 means up two directory levels
 SITE_ROOT= root()
@@ -37,6 +39,7 @@ ALLOWED_HOSTS = ['penguin.linux.test', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'reports',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
