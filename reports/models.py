@@ -23,6 +23,6 @@ class Store(models.Model):
 
 class Spin(models.Model):
     song = models.ForeignKey(Song, on_delete=models.PROTECT)
-    store = models.ManyToManyField
+    store = models.ManyToManyField(Store)
     date_played = models.DateField()
     spin_count = models.IntegerField()
